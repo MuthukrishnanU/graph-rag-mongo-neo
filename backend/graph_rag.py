@@ -16,9 +16,9 @@ class AgentState(TypedDict):
 # Initialize connections and LLM
 def get_graph():
     kwargs = {
-        "url": os.getenv("NEO4J_URI", "bolt://localhost:7687"),
-        "username": os.getenv("NEO4J_USERNAME", "neo4j"),
-        "password": os.getenv("NEO4J_PASSWORD", "password")
+        "url": os.getenv("NEO4J_URI"),
+        "username": os.getenv("NEO4J_USERNAME"),
+        "password": os.getenv("NEO4J_PASSWORD")
     }
     
     db_name = os.getenv("NEO4J_DATABASE")
